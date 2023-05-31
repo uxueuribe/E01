@@ -12,4 +12,8 @@ consulta2<-df%>%
   group_by(Invoice)%>%
   summarise(total_prod=sum(Quantity), total_prec=sum(Price))
 consulta2$media<-(consulta2$total_prec/consulta2$total_prod)
+#12.	Calcula el número de productos por pedido
+consulta3<-df%>%
+  group_by(Invoice)%>%
+  summarise(total_prod=sum(Quantity))
 
